@@ -1,0 +1,209 @@
+html {
+    box-sizing: border-box;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+    background-color: #fafafa
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: #fafafa;
+}
+
+.doc-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #467706;
+}
+
+.doc-container {
+    margin-left: 220px;
+}
+
+.doc-nav-title {
+    font-size: 21px;
+    text-align: center;
+    padding: 12px 0px;
+    font-weight: bold;
+    /* background-color: #89bf04; */
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.doc-nav a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.bk-theme {
+    background-image: linear-gradient(225deg, #348ec2 0%, #d1ce62 100%)
+}
+
+#swagger-ui>.swagger-ui>.topbar {
+    background-image: linear-gradient(225deg, #D1CE62 0%, #348EC2 100%)
+}
+
+#swagger-ui .topbar-wrapper {
+    flex-direction: row-reverse;
+}
+
+#swagger-ui .topbar-wrapper a {
+    display: none;
+}
+
+#swagger-ui .topbar-wrapper form {
+    max-width: 600px;
+}
+
+#swagger-ui>.swagger-ui>.wrapper {
+    display: none;
+}
+
+.ds-container{
+
+}
+.ds-nav{
+    background-image: linear-gradient(225deg, #D1CE62 0%, #348EC2 100%);
+    display: flex;
+    align-items: center;
+    height: 51px;
+
+}
+.ds-nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1460px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.ds-nav-container>ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.ds-nav-container>ul>li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ds-nav-container>ul>li>a{
+    display: flex;
+    align-items: center;
+}
+
+.ds-nav-container>ul>li>a svg{
+    margin-right: 5px;
+}
+
+.ds-nav-container>ul>li:hover {
+    background-color:rgba(0,0,0,0.2);
+}
+
+.ds-nav-container>ul>li a {
+    color: #ffffff;
+}
+
+.ds-content {
+    width: 100%;
+    max-width: 1460px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.ds-card-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.ds-card {
+    display: flex;
+    width: calc(25% - 20px);
+    min-height: 150px;
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #dce0e6;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.05);
+    flex-direction: column;
+}
+
+@media screen and (max-width: 960px) {
+    .ds-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .ds-card {
+        width: 100%;
+    }
+}
+
+.ds-card:hover{
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,.1);
+}
+
+.ds-card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.ds-card-content>ul>li {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ds-color-green {
+    color: #52c41a;
+}
+
+.ds-color-gold {
+    color: #ffc53d;
+}
+
+.ds-color-red {
+    color: #f5222d;
+}
+
+.ds-color-grey {
+    color: #a0a0a0;
+}
+
+.ds-hover-color-green:hover {
+    color: #52c41a;
+}
+
+.ds-hover-color-gold:hover {
+    color: #ffc53d;
+}
+
+.ds-hover-color-red:hover {
+    color: #f5222d;
+}

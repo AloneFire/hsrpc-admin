@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - HSRPC ADMIN</title>
+    <link rel="stylesheet" href="{{ url_for(".static",filename="vendor/nav.css") }}">
+    <link rel="stylesheet" href="{{ url_for(".static",filename="fontawesome/css/all.min.css") }}">
+    <link rel="icon" type="image/png" href="{{ url_for(".static",filename="swagger_static/favicon-32x32.png") }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ url_for(".static",filename="swagger_static/favicon-16x16.png") }}" sizes="16x16" />
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for(".static",filename="main.css") }}">
+</head>
+<body>
+    <div class="nav doc-nav bk-theme">
+        <div class="nav-top">
+            <div class="doc-nav-title">
+                HSRPC
+            </div>
+        </div>
+        <ul>
+            <li class="nav-item">
+                <a href="/"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            <li class="nav-item nav-show">
+                <a href="javascript:;"><i class="fas fa-book"></i><span>API DOC</span><span class="nav-more"><i class="fas fa-angle-right"></i></span></a>
+                <ul>
+                    {% for service in services %}
+                        {% if service.apidoc %}
+                            <li>
+                                <a href="/apidoc?url={{ service.apidoc }}">
+                                    <span>{{ service.service }}</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="doc-container">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ url_for(".static",filename="vendor/jquery-1.11.0.min.js") }}"></script>
+    <script src="{{ url_for(".static",filename="vendor/nav.js") }}"></script>
+    {% block script %}{% endblock %}
+</body>
+</html>
